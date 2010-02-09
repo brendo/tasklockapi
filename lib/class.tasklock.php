@@ -39,8 +39,7 @@
 			if (!$res->valid()) return false;
 			
 			$lock = $res->current();
-			var_dump(time() - $lock->time < $this->time);
-			var_dump($lock);
+			
 			return time() - $lock->time < $this->time;
 		}
 		
