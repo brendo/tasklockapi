@@ -10,18 +10,21 @@ Requirements: Symphony 2.0.6
 Installation
 -------------------------------------------------------------------------------
 
-1. Upload the 'tasklockapi' folder in this archive to your Symphony
+1. Upload the "tasklockapi" folder in this archive to your Symphony
    'extensions' folder.
 
 2. Enable it by selecting "Task Lock API", and choosing Enable from the
    with-selected menu, then click Apply.
 
+3. Install and enable the "ASDC" extension:
+   http://symphony-cms.com/download/extensions/view/20038/
 
 Example
 -------------------------------------------------------------------------------
 
 <?php
 	
+	require_once EXTENSIONS . '/asdc/lib/class.asdc.php';
 	require_once EXTENSIONS . '/tasklockapi/extension.driver.php';
 	
 	$lock = new TaskLock('example');
